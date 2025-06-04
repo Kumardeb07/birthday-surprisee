@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Make sure the page scales properly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <style>
+    /* Reset and basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    /* Collage Background Container */
+    #collage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      /* Define a 2-row x 5-column grid yielding 10 cells for your 10 images */
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2px; /* Adjust gap between images as desired */
+      z-index: -1; /* Place behind the text content */
+    }
+    #collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image fills the cell without distortion */
+    }
+    /* Text Container for the Message */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
+      border-radius: 8px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+    #text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      white-space: pre-line; /* Preserves line breaks in the message */
+    }
+  </style>
+</head>
+<body>
+  <!-- Collage Background Container -->
+  <div id="collage">
+    <img src="images/pic1.jpg" alt="Image 1">
+    <img src="images/pic2.jpg" alt="Image 2">
+    <img src="images/pic3.jpg" alt="Image 3">
+    <img src="images/pic4.jpg" alt="Image 4">
+    <img src="images/pic5.jpg" alt="Image 5">
+    <img src="images/pic6.jpg" alt="Image 6">
+    <img src="images/pic7.jpg" alt="Image 7">
+    <img src="images/pic8.jpg" alt="Image 8">
+    <img src="images/pic9.jpg" alt="Image 9">
+    <img src="images/pic10.jpg" alt="Image 10">
+  </div>
+  
+  <!-- Container for the Word-by-Word Message -->
+  <div class="container">
+    <div id="text"></div>
+  </div>
+  
+  <script>
+    // Your heartfelt birthday message, using a template literal for multiline text:
+    const fullText = `ITS MY GIRLSSS BIRTHDAYYYYY!!!!!!!!!!!!!!!!!!!!!!!!!!! 🫶🏻
+Happy Birthday to Love of my life 🥳  
+My babygirl will turn 14 this yearrrr :D
+I hope ei bochor er birthday te tumi na kado babyyy and ami kono sujog o debo na kadar, IM SO HAPPYYYYY MY BABYGIRL IS GROWINGGGGG 😭 NOT ONLY MY BABYGIRL YOU ARE MY OTHER HALF TOOO 😭 IM SOOO HAPPY TODAY BABY (⁠≧⁠▽⁠≦⁠)
+
+The day I dmed you i actually never thought I would get close to someone this much, you mean so much to me. You mean me everything. Sokaler chokh kholar por theke tomar bhabna ta mone asha tarpor tomar msgs dekha, good morning bola theke raate ghumanor ageh tomar sathe kotha bola theke tomar sathe kotha bolte bolte ghumano, tomar kotha bhabte bhabte ghumano shows how much you are involved in my daily life literally din er shuru theke sesh obdi you are now part of my daily routine I never ever thought kaoke etoh ta close rakhbo nijer...        I still remember from remembering your fav things, turning your insecurities into the things you love, that sedin er photo dekhar por prothom sopno, asking about your traumas, from having a crush on you to making you entirely mine. We passed eksathe koto gulo din and koto kichu korechi baby almost everytime I was happy with you. 
+Jani ami onek bar bolechi but abar o bolchi Whenever tomar ek baro amar need hoye amar kache chole esho oki? Ami sobbb thik korar and tomar help korar jothasadho chesta korbo.
+
+Having you makes me happy, you don't know how many times I smile just for you, you always make me smile, your cute texts, tomar photo , tomar oi cute jealousy, your dumb kartoteh sob is sooo funny everything just make me smileee. I just don't know how to thank you for everything but all I know is I will stay beside you tomar Jeevan Saathi hoye till my last breath.
+
+Your eyes, Tomar smile,Tomar laugh, Tomar kothai kothai raga, tomar oi your oi mishti mishti awaj, tomar shundor mukh ta, tomar amar jonno bhalobasha and how can I not mention the over loaded upche pora cuteness of yours 😭 I'm in love w these things and i'm INCOMPLETE without these things.                        Diksha i love you that much even words can't express the love I have for you. It's beyond words. Thank you for loving me. Thanks for existing baby 🥹
+I promise I will stay by your side Jai hok amai tomar pashe hi pabe baby, i know amader o jhogra hoye yes, hoye but it's important arrr ykkkkkk ami issss never leaving you. And I promise I would stop you even if you try to leave me (i would beg) you to stay I NEED YOU. YOU ARE THE BESTTTTT THING I EVER GOT and it feels sooooo peaceful that you are mine (just a reminder I'M FULLY MY DIKSHA'S)
+
+I'm sorry for the times I hurt you jene bhujhe hok or na jene bhujhe hoye toh che ami janina ki korte pari oi jonno but shotti janina all I know is to learn from those mistakes and keep you happy and not to make you lose your that beautiful smile
+Once again HAPPY BIRTHDAY MY PRETTY LITTLE BABY AHHHHHHH AMAR SHONAR BIRTHDAY I'M SOOOO HAPPIEEEE :D                     I LOVE YOU BABYYYYYYYYYYYY (jani onek bar bolechi ageo but I mean every bar) and I will love only you, yes only YOU. I love you from your head to toe, everything in you.
+Babyyyy jani tomar birthday buttt ami na ekta jinish chai tomar theke "Ei amai kichu nai baa dile, Ei amai kichu nai baa dile nijer kare nao" Babyyy nijer kore nao ar nijer moton rekho amaiii and naaa I hope emon hi bhabhe ei online er koi ekta bochor kete jak tarpor jokhon long distance ta sesh hobe proti bochor 😋 tomar birthday ami hi irl celebrate korabo baby 😼. Emon bhabe hi boro hote thako baby ashte ashte sobbbb goals achieve korte hobe ekdin i wanna see you achieving your goals in your life (WITH ME). 😭
+Once again happy birthday my Queen, my wifey, my Diksha. SHE'SSSS MINE. MY DIKSHA.
+Have a lovely dayyy, actually have a lovely year it's another year of your life, Have the happiest birthday baby and keeppppp smiling don't let that cute and beautiful smile of yours fade, keep giggling, getting red, , and KEEP LOVING ME 😭 IM SO ADHURA WITHOUT YOUR LOVE ar haa it's your day enjoy babyyyy 
+Have a tight hug baby (⁠つ⁠≧⁠▽⁠≦⁠)⁠つ
+Ar haaa how can I not kiss you 😭
+MWAHHHHHHHHHH (ON YOUR THOSE CUTE CHEEKS) 😭 MY PRETTY LITTLE BABY 😭 IM IN SOOO LOVE WITH YOU ❤ 🥹
+Forever yours <3
+Tomar Kumar 💗
+(The boy who is dikshahin without his diksha(you)).`;
+
+    // Split the message into words
+    const words = fullText.split(" ");
+    const textContainer = document.getElementById('text');
+    let wordIndex = 0;
+
+    // Function to display one word at a time with a 500ms delay
+    function displayWords() {
+      if (wordIndex < words.length) {
+        textContainer.innerHTML += words[wordIndex] + " ";
+        wordIndex++;
+        setTimeout(displayWords, 500);
+      }
+    }
+
+    // Start the animation once the page loads
+    displayWords();
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Make sure the page scales properly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <style>
+    /* Reset and basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    /* Collage Background Container */
+    #collage {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      /* Define a 2-row x 5-column grid yielding 10 cells for your 10 images */
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2px; /* Adjust gap between images as desired */
+      z-index: -1; /* Place behind the text content */
+    }
+    #collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures image fills the cell without distortion */
+    }
+    /* Text Container for the Message */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
+      border-radius: 8px;
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+    }
+    #text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      white-space: pre-line; /* Preserves line breaks in the message */
+    }
+  </style>
+</head>
+<body>
+  <!-- Collage Background Container -->
+  <div id="collage">
+    <img src="images/pic1.jpg" alt="Image 1">
+    <img src="images/pic2.jpg" alt="Image 2">
+    <img src="images/pic3.jpg" alt="Image 3">
+    <img src="images/pic4.jpg" alt="Image 4">
+    <img src="images/pic5.jpg" alt="Image 5">
+    <img src="images/pic6.jpg" alt="Image 6">
+    <img src="images/pic7.jpg" alt="Image 7">
+    <img src="images/pic8.jpg" alt="Image 8">
+    <img src="images/pic9.jpg" alt="Image 9">
+    <img src="images/pic10.jpg" alt="Image 10">
+  </div>
+  
+  <!-- Container for the Word-by-Word Message -->
+  <div class="container">
+    <div id="text"></div>
+  </div>
+  
+  <script>
+    // Your heartfelt birthday message, using a template literal for multiline text:
+    const fullText = `ITS MY GIRLSSS BIRTHDAYYYYY!!!!!!!!!!!!!!!!!! 🫶🏻
+Happy Birthday to Love of my life 🥳  
+My babygirl will turn 14 this yearrrr :D
+I hope ei bochor er birthday te tumi na kado babyyy and ami kono sujog o debo na kadar, IM SO HAPPYYYYY MY BABYGIRL IS GROWINGGGGG 😭 NOT ONLY MY BABYGIRL YOU ARE MY OTHER HALF TOOO 😭 IM SOOO HAPPY TODAY BABY (⁠≧⁠▽⁠≦⁠)
+
+The day I dmed you i actually never thought I would get close to someone this much, you mean so much to me. You mean me everything. Sokaler chokh kholar por theke tomar bhabna ta mone asha tarpor tomar msgs dekha, good morning bola theke raate ghumanor ageh tomar sathe kotha bola theke tomar sathe kotha bolte bolte ghumano, tomar kotha bhabte bhabte ghumano shows how much you are involved in my daily life literally din er shuru theke sesh obdi you are now part of my daily routine I never ever thought kaoke etoh ta close rakhbo nijer...        I still remember from remembering your fav things, turning your insecurities into the things you love, that sedin er photo dekhar por prothom sopno, asking about your traumas, from having a crush on you to making you entirely mine. We passed eksathe koto gulo din and koto kichu korechi baby almost everytime I was happy with you. 
+Jani ami onek bar bolechi but abar o bolchi Whenever tomar ek baro amar need hoye amar kache chole esho oki? Ami sobbb thik korar and tomar help korar jothasadho chesta korbo.
+
+Having you makes me happy, you don't know how many times I smile just for you, you always make me smile, your cute texts, tomar photo , tomar oi cute jealousy, your dumb kartoteh sob is sooo funny everything just make me smileee. I just don't know how to thank you for everything but all I know is I will stay beside you tomar Jeevan Saathi hoye till my last breath.
+
+Your eyes, Tomar smile,Tomar laugh, Tomar kothai kothai raga, tomar oi your oi mishti mishti awaj, tomar shundor mukh ta, tomar amar jonno bhalobasha and how can I not mention the over loaded upche pora cuteness of yours 😭 I'm in love w these things and i'm INCOMPLETE without these things.                        Diksha i love you that much even words can't express the love I have for you. It's beyond words. Thank you for loving me. Thanks for existing baby 🥹
+I promise I will stay by your side Jai hok amai tomar pashe hi pabe baby, i know amader o jhogra hoye yes, hoye but it's important arrr ykkkkkk ami issss never leaving you. And I promise I would stop you even if you try to leave me (i would beg) you to stay I NEED YOU. YOU ARE THE BESTTTTT THING I EVER GOT and it feels sooooo peaceful that you are mine (just a reminder I'M FULLY MY DIKSHA'S)
+
+I'm sorry for the times I hurt you jene bhujhe hok or na jene bhujhe hoye toh che ami janina ki korte pari oi jonno but shotti janina all I know is to learn from those mistakes and keep you happy and not to make you lose your that beautiful smile
+Once again HAPPY BIRTHDAY MY PRETTY LITTLE BABY AHHHHHHH AMAR SHONAR BIRTHDAY I'M SOOOO HAPPIEEEE :D                     I LOVE YOU BABYYYYYYYYYYYY (jani onek bar bolechi ageo but I mean every bar) and I will love only you, yes only YOU. I love you from your head to toe, everything in you.
+Babyyyy jani tomar birthday buttt ami na ekta jinish chai tomar theke "Ei amai kichu nai baa dile, Ei amai kichu nai baa dile nijer kare nao" Babyyy nijer kore nao ar nijer moton rekho amaiii and naaa I hope emon hi bhabhe ei online er koi ekta bochor kete jak tarpor jokhon long distance ta sesh hobe proti bochor 😋 tomar birthday ami hi irl celebrate korabo baby 😼. Emon bhabe hi boro hote thako baby ashte ashte sobbbb goals achieve korte hobe ekdin i wanna see you achieving your goals in your life (WITH ME). 😭
+Once again happy birthday my Queen, my wifey, my Diksha. SHE'SSSS MINE. MY DIKSHA.
+Have a lovely dayyy, actually have a lovely year it's another year of your life, Have the happiest birthday baby and keeppppp smiling don't let that cute and beautiful smile of yours fade, keep giggling, getting red, , and KEEP LOVING ME 😭 IM SO ADHURA WITHOUT YOUR LOVE ar haa it's your day enjoy babyyyy 
+Have a tight hug baby (⁠つ⁠≧⁠▽⁠≦⁠)⁠つ
+Ar haaa how can I not kiss you 😭
+MWAHHHHHHHHHH (ON YOUR THOSE CUTE CHEEKS) 😭 MY PRETTY LITTLE BABY 😭 IM IN SOOO LOVE WITH YOU ❤ 🥹
+Forever yours <3
+Tomar Kumar 💗
+(The boy who is dikshahin without his diksha(you)).`;
+
+    // Split the message into words
+    const words = fullText.split(" ");
+    const textContainer = document.getElementById('text');
+    let wordIndex = 0;
+
+    // Function to display one word at a time with a 369ms delay
+    function displayWords() {
+      if (wordIndex < words.length) {
+        textContainer.innerHTML += words[wordIndex] + " ";
+        wordIndex++;
+        setTimeout(displayWords, 369);
+      }
+    }
+
+    // Start the animation once the page loads
+    displayWords();
+  </script>
+</body>
+</html>
